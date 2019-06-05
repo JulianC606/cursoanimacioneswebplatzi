@@ -1,0 +1,123 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template: 1fr 1fr 50vh 1fr/ 6fr 4fr;
+    background-color: #00a8ff;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    grid-gap: 10px;
+}
+header{
+    display: flex;
+    background-color: #f5f6fa;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 5vh;
+    color: #192a56;
+    box-shadow: 0px 2px 10px 5px rgba(47,54,64,.5);
+    grid-column: 1 / 3;
+}
+#meta{
+    display: flex;
+    align-items: center;
+    grid-column: 2 / 3;
+    background-color: #44bd32;
+    padding: 0 5vw;
+}
+#meta span{
+    font-size: 1.5rem;
+    color: #f5f6fa;
+    font-weight: bolder;    
+}
+#corredorContainer{
+    grid-column: 1/3;
+}
+
+#corredor{
+    height: 100%;
+}
+
+#corredor svg{
+    position: relative;
+    top: calc(100% - 100px);
+    animation-name: subir;
+    animation-duration: 10s;   
+    animation-fill-mode: forwards;
+}
+#corredor svg path{
+    fill: #2f3640;
+}
+footer{
+    text-align: center;
+    display: flex;
+    background-color: #f5f6fa;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 5vh;
+    color: #192a56;
+    grid-column: 1/3;
+    background-color: #f5f6fa;
+    box-shadow: 2px 0px 10px 5px rgba(47,54,64,.5);
+}
+
+@keyframes subir{
+    0%{
+        top: calc(100% - 100px);
+        left: 0;
+    }
+    100%{
+        top: calc(0% - 80px);
+        left: 60%;
+        transform: rotate(24deg)
+    }
+}
+
+@keyframes salir{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(100vw);
+    }
+}
+
+@keyframes fiesta{
+    0%{
+        background-color: #4cd137;
+    }
+    10%{
+        background-color: #2f3640;
+    }
+    20%{
+        background-color: #fbc531;
+    }
+    30%{
+        background-color: #2f3640;
+    }
+    40%{
+        background-color: #e84118;
+    }
+    50%{
+        background-color: #2f3640;
+    }
+    60%{
+        background-color: #9c88ff;
+    }
+    70%{
+        background-color: #2f3640;
+    }
+    80%{
+        background-color: #4cd137;
+    }
+    90%{
+        background-color: #2f3640;
+    }
+    100%{
+        background-color: #fbc531;
+    }
+}
